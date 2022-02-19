@@ -1,0 +1,12 @@
+package test;
+
+public class Exception {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LuggageCheck l = new LuggageCheck();
+		l.luggage(10);
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+package day3Handsone;
+
+class Rectangle {
+	double length;
+	double width;
+	void setRectangle(double length ,double width) {
+		this.length = length;
+		this.width = width;
+		
+	}
+	double getArea() {
+		System.out.println("Area of rectangle : " +(length*width));
+		}
+}
+class Box extends Rectangle {
+	double height;
+	void setBox(double a ,double b ,double c) {
+		
+	}
+	double getvolume(double a) {
+		
+	}
+	
+}
+public class Rectangle1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

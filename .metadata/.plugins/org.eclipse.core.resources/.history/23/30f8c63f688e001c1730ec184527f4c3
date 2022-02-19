@@ -1,0 +1,28 @@
+package day7Handsone;
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+
+	public class  DeveloperComparator {
+
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+	      ArrayList<DeveloperQues1> student = new ArrayList<>();
+	      student.add(new DeveloperQues1(123, "Hema", 3, 1245000));
+	      student.add(new DeveloperQues1(124, "Nancy",2, 13600));
+	      student.add(new DeveloperQues1(136, "Manvi",5, 145000));
+	      student.add(new DeveloperQues1(167, "Yash", 7, 150000));
+	      student.add(new DeveloperQues1(189, "Amit", 9, 1600000));
+	      System.out.println("Arrange data according to marks ");
+	      
+	     // Collections.sort(student , new MarksCompare());
+	      Iterator<DeveloperQues1> it = DeveloperQues1.iterator();
+	    		  while(it.hasNext()) {
+	    			 DeveloperQues1 dev = it.next();
+	    			 System.out.println(dev.id+ "   "+dev.name+"   "+dev.experience+"  "+dev.salary);
+	    		  }
+	    		  
+}
+	}

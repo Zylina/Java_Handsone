@@ -1,0 +1,94 @@
+package day6Handsone;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+class Employee {
+    int id,exYear;
+	String name,skill;
+	float salary;
+	
+	public Employee(int id, int exYear, String name, String skill, float salary) {
+		super();
+		this.id = id;
+		this.exYear = exYear;
+		this.name = name;
+		this.skill = skill;
+		this.salary = salary;
+	}
+
+}
+
+class NewEmployee {
+     // TODO Auto-generated method stub
+	int id,exYear;
+	String name,skill;
+	float salary;
+	
+   public NewEmployee(int id, int exYear, String name, String skill,
+			float salary) {
+		super();
+		this.id = id;
+		this.exYear = exYear;
+		this.name = name;
+		this.skill = skill;
+		this.salary = salary;
+	}
+}
+public class SetRelatedQuestion {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Set<Employee> hs = new HashSet<>();
+		Set<NewEmployee> hs1 = new HashSet<>();
+		
+		Employee e = new Employee(1, 1, "Kapil", "DB", 20000);
+		Employee e1 = new Employee(2, 5, "Ram", "Java", 80000);
+		NewEmployee e11 = new NewEmployee(3, 5, "Himanshi", "Java", 90000);
+		
+		hs.add(e1);
+		hs.add(e);
+		hs1.add(e11);
+		
+		System.out.println("Total Employee = " + (hs.size() + hs1.size()));
+		
+		Iterator hsItr = hs.iterator();
+		while(hsItr.hasNext()){
+			Employee emp = (Employee) hsItr.next();
+		
+			System.out.println(" id= "+emp.id +":: ExYear = "+ emp.exYear+" :: name = "+ emp.name  +" :: Skill = "+emp.skill+ "  salary "+ emp.salary);
+			if(emp.id == 106){
+				System.out.println(emp.id+"  is working ");
+			}
+			if(emp.name.equalsIgnoreCase("Kapil")){
+				System.out.println(emp.name +" is working ");
+			}
+			if(emp.exYear<3){
+				hsItr.remove();
+			}
+			if(emp.skill.equalsIgnoreCase("Java")){
+				System.out.println(emp.name + " has Java Skill ");
+			}
+			
+		} 
+		System.out.println(" New Employee List::");
+		
+		/*for(NewEmployee ee: hs1){
+			System.out.println(" id= "+ee.id +":: ExYear = "+ ee.exYear+" :: name = "+ ee.name  +" :: Skill = "+ee.skill+ "  salary "+ ee.salary);
+			if(ee.id == 106){
+				System.out.println(ee.id+"  is working ");
+			}
+			if(ee.name.equalsIgnoreCase("Kapil")){
+				System.out.println(ee.name +" is working ");
+			}
+			if(ee.exYear<3){
+				hs.remove(ee);
+			}
+			if(ee.skill.equalsIgnoreCase("Java")){
+				System.out.println(ee.name + " has Java Skill ");
+			}
+		}
+		System.out.println(" Total Employee :: = "+(size1+size2));*/
+	}
+}
