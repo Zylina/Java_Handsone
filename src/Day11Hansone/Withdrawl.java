@@ -1,5 +1,6 @@
 package Day11Hansone;
 
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,7 +26,7 @@ class Transaction{
 		}
 	}
 }
-public class Withdraw {
+public class Withdrawl {
 	static Scanner sc = new Scanner(System.in);
 	static int account_no=0,balance=0;
 	static String acc_name = null;
@@ -175,8 +176,6 @@ public class Withdraw {
 			}
 		return data;
 		
-		
-	}
+		}
 
-
-	}
+}
